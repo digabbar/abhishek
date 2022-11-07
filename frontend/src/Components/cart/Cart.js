@@ -32,16 +32,21 @@ function Cart() {
           <Total />
         </div>
       </div>
-      <div className="text-end" size="lg" varient="primary">
-        <Button
-          className={classes.checkoutButton}
-          as={Link}
-          variant="success"
-          to="/shipping"
-        >
-          Checkout
-        </Button>
-      </div>
+      {cart.length > 0 && (
+        <div className="text-end" size="lg" varient="primary">
+          <Button
+            className={classes.checkoutButton}
+            as={Link}
+            variant="success"
+            to="/shipping"
+          >
+            Checkout
+          </Button>
+        </div>
+      )}
+      {cart.length === 0 && (
+        <h3 className="text-center text-danger">Your Cart is Empty</h3>
+      )}
     </Fragment>
   );
 }

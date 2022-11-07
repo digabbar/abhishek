@@ -64,6 +64,7 @@ const Login = () => {
             placeholder="Password"
             ref={passwordInputRef}
             required
+            autoComplete="on"
           />
         </Form.Group>
         <div className="text-end">

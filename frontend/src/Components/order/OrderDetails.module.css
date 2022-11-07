@@ -46,3 +46,16 @@
 .priceInfo p b {
   float: right;
 }
+
+@media only screen and (max-width: 600px) {
+  .updateOrder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    height: 100px;
+  }
+  .imageContainer {
+    display: none;
+  }
+}

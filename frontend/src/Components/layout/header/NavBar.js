@@ -6,6 +6,7 @@ import SearchForm from "./SearchForm";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../actions/userActions";
+import { deleteCartData } from "../../slice/cartSlice";
 function NavBar() {
   const dispatch = useDispatch();
   const { user, isAuthenticated } = useSelector((state) => state.auth);
@@ -20,6 +21,7 @@ function NavBar() {
   };
 
   const logoutHandler = () => {
+    dispatch(deleteCartData());
     dispatch(logout());
   };
   return (
